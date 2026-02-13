@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fayza</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'VT323', monospace;
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        #dynamic-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background-image: url('assets/background.gif'); */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -2;
+            opacity: 0.4;
+        }
+
+        .bw-filter {
+            filter: grayscale(100%);
+        }
+
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #splash-gif {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #main-content {
+            display: none;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+            padding: 40px 20px;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .title-frame {
+            display: inline-block;
+            background-color: #fff;
+            padding: 15px 30px;
+            border: 8px solid #000;
+            box-shadow: 0 0 0 2px #fff;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #000;
+            font-size: 48px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .photo-frame {
+            background-color: #fff;
+            border: 10px solid #000;
+            box-shadow: 0 0 0 3px #fff;
+            padding: 25px;
+            margin-bottom: 40px;
+            position: relative;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .frame-title {
+            background-color: #000;
+            color: #fff;
+            padding: 8px 15px;
+            font-size: 24px;
+            display: inline-block;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+        }
+
+        .frame-content {
+            color: #000;
+            font-size: 22px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .bio-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .photo-frame {
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            .frame-content {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bw-filter">
+    <div id="dynamic-background"></div>
+
+    <div id="splash-screen" style="cursor: pointer;">
+        <img id="splash-gif" src="assets/splash.gif" alt="Кликни чтобы войти">
+    </div>
+
+    <div id="main-content">
+        <div class="content-wrapper">
+            <div class="header">
+                <div class="title-frame">
+                    <h1>FAYZA</h1>
+                </div>
+                <p style="font-size: 24px; text-shadow: 2px 2px 0 #000;">добро пожаловать... в МОЁ пространство!</p>
+            </div>
+
+            <div class="bio-container">
+                <div class="photo-frame">
+                    <div class="frame-title">ОБО МНЕ</div>
+                    <div class="frame-content">
+                        <p>привет! я подросток (14), программист и дизайнер, хочу стать одним из (или если что-то не получится: психологом)</p>
+                        <p>я обожаю разговаривать с иностранцами (я из Украины), так-что пишите где хотите</p>
+                        <p>пытаюсь быть позитивным, я оч редко в плохом состоянии (если я в плохом состоянии, то в ОЧЕНЬ плохом), но я всегда здесь если что-то нужно! >w< </p>
+                        <p>на данный момент я работаю над модлоадером к игре друга, он будет выложен публично когда я закончу (игре нужен полный реворк, поэтому много фич не будет)</p>
+                        <p>single, bisexual</p>
+                    </div>
+                </div>
+
+                <div class="photo-frame">
+                    <div class="frame-title">ИНТЕРЕСЫ</div>
+                    <div class="frame-content">
+                        <ul style="padding-left: 20px;">
+                            <li>инди игры</li>
+                            <li>программирование</li>
+                            <li>рисование (в основном абстрактное)</li>
+                            <li>политическая география</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="photo-frame">
+                    <div class="frame-title">ЛЮБИМОЕ</div>
+                    <div class="frame-content">
+                        <p>игры: omori, oneshot, gmod, rblx, gd, rhythia</p>
+                        <p>фандомы: omori, oneshot, murder drones (раньше), pjsk, vocaloid</p>
+                        <p>музыка: рэп (американский), ost игр, ВОКАЛОИДДДДДДДД</p>
+                        <p>хобби: кодить игры в рб, музыку делать, маяться с компами</p>
+                    </div>
+                </div>
+
+                <div class="photo-frame">
+                    <div class="frame-title">СОЦСЕТИ</div>
+                    <div class="frame-content">
+                        <a href="https://www.tiktok.com/@n1wxu" target="_blank" title="Visit Example">тикток</a>   
+                        <a href="https://www.youtube.com/@cedfab" target="_blank" title="Visit Example">ютуб</a>   
+                        <a href="https://www.roblox.com/users/878408337/profile" target="_blank" title="Visit Example">роблокс</a>   
+                        <a href="https://steamcommunity.com/id/n1wxu/" target="_blank" title="Visit Example">стим</a> 
+                        <a href="https://github.com/fay-za/" target="_blank" title="Visit Example">гитхаб</a> 
+                        <p>стоат (альтернатива дс): fayza#7118</p>
+                        <p>дискорд: @f4yzza</p>
+                        <p>телеграм: @f4yzza</p>
+                        <p>у меня нету активных аккаунтов кроме этих</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="sfx" preload="auto">
+        <source src="assets/welcome.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="bg-music" loop preload="auto">
+         <source src="assets/myspace.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const splashScreen = document.getElementById('splash-screen');
+        const mainContent = document.getElementById('main-content');
+        const sfx = document.getElementById('sfx');
+        const dynamicBg = document.getElementById('dynamic-background');
+        const splashGif = document.getElementById('splash-gif');
+        
+        let audioStarted = false;
+        
+        const clickInstruction = document.createElement('div');
+        clickInstruction.textContent = 'Click to enter...';
+        clickInstruction.style.position = 'absolute';
+        clickInstruction.style.bottom = '50px';
+        clickInstruction.style.left = '50%';
+        clickInstruction.style.transform = 'translateX(-50%)';
+        clickInstruction.style.color = '#fff';
+        clickInstruction.style.fontSize = '24px';
+        clickInstruction.style.textShadow = '2px 2px 0 #000';
+        clickInstruction.style.animation = 'pulse 2s infinite';
+        clickInstruction.style.cursor = 'pointer';
+        clickInstruction.style.zIndex = '1001';
+        
+        const style = document.createElement('style');
+        style.textContent = `@keyframes pulse{0%{opacity:0.4;}50%{opacity:1;}100%{opacity:0.4;}}`;
+        document.head.appendChild(style);
+        
+        splashScreen.appendChild(clickInstruction);
+        
+        function resizeBackground() {
+            const contentHeight = mainContent.scrollHeight;
+            const windowHeight = window.innerHeight;
+            const shouldScroll = contentHeight > windowHeight;
+            
+            if (shouldScroll) {
+                dynamicBg.style.height = contentHeight + 'px';
+            } else {
+                dynamicBg.style.height = '100vh';
+            }
+        }
+        
+        function startAudioSequence(event) {
+            if (audioStarted) return;
+            
+            audioStarted = true;
+            
+            clickInstruction.style.display = 'none';
+            
+            const playAudio = () => {
+                sfx.currentTime = 0;
+                sfx.volume = 0.7;
+                
+                sfx.play().then(() => {
+                    setTimeout(() => {
+                        splashScreen.style.display = 'none';
+                        mainContent.style.display = 'block';
+                        resizeBackground();
+                    }, 5000);
+                    
+                }).catch(e => {
+                    setTimeout(() => {
+                        splashScreen.style.display = 'none';
+                        mainContent.style.display = 'block';
+                        resizeBackground();
+                    }, 1000);
+                });
+            };
+            
+            if (window.AudioContext || window.webkitAudioContext) {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                const audioContext = new AudioContext();
+                
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume().then(() => {
+                        playAudio();
+                    });
+                } else {
+                    playAudio();
+                }
+            } else {
+                playAudio();
+            }
+        }
+        
+        splashScreen.addEventListener('click', startAudioSequence);
+        splashGif.addEventListener('click', startAudioSequence);
+        clickInstruction.addEventListener('click', startAudioSequence);
+        
+        window.addEventListener('resize', resizeBackground);
+        
+        const observer = new MutationObserver(resizeBackground);
+        observer.observe(mainContent, { childList: true, subtree: true });
+        
+        setTimeout(() => {
+            if (!audioStarted) {
+                clickInstruction.textContent = 'CLICK ANYWHERE TO ENTER!';
+                clickInstruction.style.fontSize = '28px';
+                clickInstruction.style.animation = 'pulse 1s infinite';
+                clickInstruction.style.backgroundColor = 'rgba(0,0,0,0.7)';
+                clickInstruction.style.padding = '10px 20px';
+                clickInstruction.style.borderRadius = '10px';
+                clickInstruction.style.border = '2px solid white';
+            }
+        }, 10000);
+    });
+</script>
+</body>
+</html>
