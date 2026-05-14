@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>fayza [~/fayza] - IntelliJ IDEA 2003.1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Comic+Neue:wght@400;700&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div id="splash">
+    <div class="splash-inner">
+      <div class="splash-stars"></div>
+      <h1 class="splash-title">~ * fayza's homepage * ~</h1>
+      <p class="splash-sub blink">&gt;&gt;&gt; click anywhere to enter &lt;&lt;&lt;</p>
+      <div class="splash-badges">
+        <span class="badge">learn more about me</span>
+      </div>
+      <marquee class="splash-marquee" scrollamount="6">
+        ✦ welcome welcome welcome ✦
+      </marquee>
+    </div>
+  </div>
+
+  <div id="ide" class="hidden" data-testid="ide-root">
+
+    <!-- title bar -->
+    <div class="title-bar" data-testid="title-bar">
+      <div class="tb-left">
+        <span class="tb-logo">IDEA</span>
+        <span class="tb-title">fayza [~/fayza] — DumbaS NO IDEA 2026.1 Larper Edition</span>
+      </div>
+      <div class="tb-right">
+        <button class="tb-btn" title="minimize" data-testid="win-min">—</button>
+        <button class="tb-btn" title="maximize" data-testid="win-max">▢</button>
+        <button class="tb-btn close" title="close" data-testid="win-close">×</button>
+      </div>
+    </div>
+
+    <!-- menu bar -->
+    <div class="menu-bar" data-testid="menu-bar">
+      <span class="menu-item"><u>F</u>ile</span>
+      <span class="menu-item"><u>E</u>dit</span>
+      <span class="menu-item"><u>V</u>iew</span>
+      <span class="menu-item"><u>N</u>avigate</span>
+      <span class="menu-item"><u>C</u>ode</span>
+      <span class="menu-item">Re<u>f</u>actor</span>
+      <span class="menu-item"><u>B</u>uild</span>
+      <span class="menu-item"><u>R</u>un</span>
+      <span class="menu-item"><u>T</u>ools</span>
+      <span class="menu-item">VC<u>S</u></span>
+      <span class="menu-item"><u>W</u>indow</span>
+      <span class="menu-item"><u>H</u>elp</span>
+      <span class="menu-spacer"></span>
+    </div>
+
+    <!-- toolbar -->
+    <div class="toolbar" data-testid="toolbar">
+      <button class="tool-btn" title="Build Project" data-testid="tool-build">🔨</button>
+      <span class="tool-sep"></span>
+      <div class="run-config" data-testid="run-config">
+        <span class="rc-icon">▸</span>
+        <span class="rc-label">fayza</span>
+        <span class="rc-caret">▾</span>
+      </div>
+      <button class="tool-btn run" title="Run 'fayza'" data-testid="tool-run">▶</button>
+      <button class="tool-btn debug" title="Debug 'fayza'" data-testid="tool-debug">🐞</button>
+      <button class="tool-btn stop" title="Stop" data-testid="tool-stop">⏹</button>
+      <span class="tool-sep"></span>
+      <button class="tool-btn" title="Undo" data-testid="tool-undo">↶</button>
+      <button class="tool-btn" title="Redo" data-testid="tool-redo">↷</button>
+      <span class="tool-sep"></span>
+      <button class="tool-btn" title="Git Commit">⎇</button>
+      <button class="tool-btn" title="Search Everywhere">⌕</button>
+      <span class="toolbar-spacer"></span>
+      <span class="toolbar-badge">~ build #IC-2026.1 ~</span>
+    </div>
+
+    <div class="main">
+
+      <!-- sidebar -->
+      <aside class="sidebar" data-testid="sidebar">
+        <div class="sidebar-tabs">
+          <span class="side-tab active">1: Project</span>
+          <span class="side-tab">2: Structure</span>
+        </div>
+        <div class="sidebar-toolbar">
+          <button title="collapse all">⊟</button>
+          <button title="refresh">↻</button>
+          <button title="settings">⚙</button>
+        </div>
+        <div class="tree" id="tree" data-testid="file-tree">
+          <div class="tree-node root expanded" data-folder="fayza">
+            <span class="chevron">▾</span>
+            <span class="icon folder">▣</span>
+            <span class="label"><b>fayza</b> <span class="muted">~/fayza</span></span>
+          </div>
+          <div class="tree-children" data-testid="tree-children">
+            <div class="tree-node file" data-file="about.md" data-testid="tree-file-about">
+              <span class="icon md">M↓</span>
+              <span class="label">about.md</span>
+            </div>
+            <div class="tree-node file" data-file="interests.md" data-testid="tree-file-interests">
+              <span class="icon md">M↓</span>
+              <span class="label">interests.md</span>
+            </div>
+            <div class="tree-node file" data-file="favorites.md" data-testid="tree-file-favorites">
+              <span class="icon md">M↓</span>
+              <span class="label">favorites.md</span>
+            </div>
+            <div class="tree-node file" data-file="socials.md" data-testid="tree-file-socials">
+              <span class="icon md">M↓</span>
+              <span class="label">socials.md</span>
+            </div>
+          </div>
+          <div class="tree-node ext" data-folder="External Libraries">
+            <span class="chevron">▸</span>
+            <span class="icon folder muted">▢</span>
+            <span class="label muted">External Libraries</span>
+          </div>
+          <div class="tree-node ext" data-folder="Scratches and Consoles">
+            <span class="chevron">▸</span>
+            <span class="icon folder muted">▢</span>
+            <span class="label muted">Scratches and Consoles</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- editor column -->
+      <section class="editor-column">
+
+        <!-- tab strip -->
+        <div class="tabs" id="tabs" data-testid="tabs"></div>
+
+        <!-- breadcrumbs -->
+        <div class="breadcrumbs" id="breadcrumbs" data-testid="breadcrumbs">
+          <span>fayza</span> <span class="bc-sep">›</span>
+          <span id="bc-file">about.md</span>
+        </div>
+
+        <!-- editor split -->
+        <div class="editor-split" data-testid="editor-split">
+          <div class="pane code-pane" data-testid="code-pane">
+            <div class="gutter" id="gutter" data-testid="gutter"></div>
+            <pre class="code" id="code" data-testid="code"></pre>
+          </div>
+          <div class="pane-divider"></div>
+          <div class="pane preview-pane" id="preview-wrap" data-testid="preview-pane">
+            <div class="preview-toolbar">
+              <span class="pv-badge">Preview</span>
+              <span class="pv-spacer"></span>
+              <span class="pv-hint">↺ auto-refresh</span>
+            </div>
+            <div class="preview" id="preview" data-testid="preview"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- terminal -->
+    <div class="bottom-panel" data-testid="bottom-panel">
+      <div class="bp-tabs">
+        <span class="bp-tab active" data-testid="bp-tab-terminal">⌨ Terminal</span>
+        <span class="bp-tab">▶ Run</span>
+        <span class="bp-tab">🐞 Debug</span>
+        <span class="bp-tab">⚠ Problems</span>
+        <span class="bp-tab">✓ TODO</span>
+        <span class="bp-spacer"></span>
+        <button class="bp-mini" title="hide" data-testid="bp-hide">▾</button>
+      </div>
+      <div class="terminal" id="terminal" data-testid="terminal">
+        <div class="term-line"><span class="prompt">fayza@idea</span>:<span class="path">~/fayza</span>$ <span class="cmd">whoami</span></div>
+        <div class="term-line out">fayza :: 14yo dev from ukraine 🇺🇦</div>
+        <div class="term-line"><span class="prompt">fayza@idea</span>:<span class="path">~/fayza</span>$ <span id="term-cursor" class="cursor">▮</span></div>
+      </div>
+    </div>
+
+    <!-- status bar -->
+    <div class="status-bar" data-testid="status-bar">
+      <span class="sb-item" id="sb-file">fayza/about.md</span>
+      <span class="sb-sep"></span>
+      <span class="sb-item">indexing complete ✓</span>
+      <span class="sb-spacer"></span>
+      <span class="sb-sep"></span>
+      <span class="sb-item">1:1</span>
+      <span class="sb-item">LF</span>
+      <span class="sb-item">UTF-8</span>
+      <span class="sb-item">Markdown</span>
+      <span class="sb-item lock">🔒</span>
+    </div>
+  </div>
+
+  <div id="toast-layer" data-testid="toast-layer"></div>
+
+  <canvas id="sparkles" aria-hidden="true"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
