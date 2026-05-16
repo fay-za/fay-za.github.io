@@ -378,11 +378,6 @@ text me anywhere, i probably reply.
       termPrint("[ERR] you can't stop me >:3", 'err');
       toast('Stop', "nope, can't stop me >:3", 'stop');
     });
-    $('[data-testid="tool-build"]').addEventListener('click', () => {
-      termPrint("make all", 'cmd-line');
-      termPrint("[BUILD] compiling vibes ........ done.", 'info');
-      toast('Build', 'vibes compiled successfully', 'info');
-    });
     $('[data-testid="tool-undo"]').addEventListener('click', () => toast('Undo', 'time travel not implemented yet', 'info'));
     $('[data-testid="tool-redo"]').addEventListener('click', () => toast('Redo', 'still not implemented', 'info'));
 
