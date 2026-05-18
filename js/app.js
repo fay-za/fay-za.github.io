@@ -7,7 +7,7 @@
 
 hello! i'm a **teenager (14)**, programmer and designer.
 
-i rlly like talking with people from different countries (i'm ukrainian 🇺🇦), so feel free to text me on any of my social media.
+i rlly like talking with people from different countries, so feel free to text me on any of my social media.
 
 trying to be positive - you can rarely find me in a bad mental state, im always here if u need anything tho! \`>w<\`
 
@@ -319,7 +319,7 @@ text me anywhere, i probably reply.
     { cmd: 'neofetch',       out: ['user@fayza  ~/fayza', '------------', 'OS: Windows 11 ', 'DE: what do you think', 'Editor: DumbaS NO IDEA', 'Pronouns: they/them or whatever is in my dc status'] },
     { cmd: 'echo "hi! >w<"', out: ['hi! >w<'] },
     { cmd: 'cat .secret',    out: ['try typing in \"HESOYAM\"'] },
-    { cmd: 'whoami',         out: ['fayza :: programmer / designer / 14 / ukraine'] },
+    { cmd: 'whoami',         out: ['fayza :: programmer / designer / 14'] },
   ];
 
   let termTimer = null;
