@@ -640,17 +640,113 @@ button { font-family: inherit; color: inherit; }
 ::-webkit-scrollbar-thumb:hover { background: #5a5d60; }
 ::selection { background: #2f65ca; color: #fff; }
 
-/* ---- responsive (narrow screens) ---- */
-@media (max-width: 900px) {
+/* ---- responsive (tablets) ---- */
+@media (max-width: 900px) and (min-width: 769px) {
   .main { grid-template-columns: 200px 1fr; }
   .editor-split { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
   .pane-divider { display: none; }
   #ide { grid-template-rows: 28px 24px 36px 1fr 160px 24px; }
 }
-@media (max-width: 640px) {
-  .main { grid-template-columns: 1fr; }
-  .sidebar { display: none; }
-  .menu-bar .menu-item:nth-child(n+6) { display: none; }
+
+/* ============= MOBILE: preview-only with tabs ============= */
+@media (max-width: 768px) {
+  /* hide ide chrome entirely */
+  .title-bar,
+  .menu-bar,
+  .toolbar,
+  .sidebar,
+  .breadcrumbs,
+  .bottom-panel,
+  .status-bar,
+  .code-pane,
+  .pane-divider,
+  .preview-toolbar {
+    display: none !important;
+  }
+
+  /* collapse ide grid to just tabs + preview */
+  #ide {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+    border: 0;
+  }
+  .main {
+    flex: 1;
+    min-height: 0;
+    display: block;
+    grid-template-columns: 1fr;
+  }
+  .editor-column {
+    height: 100%;
+  }
+  .editor-split {
+    display: block;
+    height: calc(100% - 40px); /* minus tab strip */
+  }
+  .preview-pane {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* tabs become the primary navigation */
+  .tabs {
+    min-height: 40px;
+    background: var(--bg-2);
+    border-bottom: 2px solid var(--hot-pink);
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-shrink: 0;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    padding: 10px 14px;
+    font-size: 13px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--border);
+  }
+  .tab.active {
+    border-top-width: 3px;
+  }
+  .tab .tab-close { display: none; } /* can't close on mobile */
+  .tab .tab-icon { font-size: 11px; }
+
+  /* preview fills screen */
+  .preview {
+    padding: 18px 18px 80px;
+    font-size: 16px;
+    line-height: 1.75;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+  .preview h1 { font-size: 26px; margin-top: 8px; }
+  .preview h2 { font-size: 20px; }
+  .preview h3 { font-size: 16px; }
+
+  /* splash sizing */
+  .splash-inner {
+    padding: 22px 18px;
+    max-width: 92%;
+    border-width: 3px;
+  }
+  .splash-title { font-size: 22px; }
+  .splash-sub { font-size: 14px; }
+  .badge { font-size: 13px; }
+  .splash-marquee { font-size: 13px; }
+
+  /* disable sparkles canvas on mobile (perf + irrelevant for touch) */
+  #sparkles { display: none; }
+
+  /* hide toast layer offset (no terminal underneath) */
+  #toast-layer {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+  }
+  .toast { min-width: 0; width: 100%; }
 }
 
 /* konami rainbow mode */

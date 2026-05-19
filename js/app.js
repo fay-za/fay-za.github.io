@@ -85,16 +85,29 @@ text me anywhere, i probably reply.
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
+  // ===== mobile detection =====
+  const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
   // ===== splash gate =====
   function initSplash() {
     const splash = $('#splash');
     const ide = $('#ide');
-    const enter = () => {
+    const enter = async () => {
       splash.classList.add('hidden');
       ide.classList.remove('hidden');
-      openFile('about.md');
+      if (isMobile()) {
+        // mobile: pre-open every page so the tabs strip acts as nav
+        const files = ['about.md', 'interests.md', 'favorites.md', 'socials.md'];
+        for (const f of files) {
+          // eslint-disable-next-line no-await-in-loop
+          await openFile(f);
+        }
+        setActive('about.md');
+      } else {
+        openFile('about.md');
+        startTerminalTyping();
+      }
       bumpVisitor();
-      startTerminalTyping();
     };
     splash.addEventListener('click', enter, { once: true });
     document.addEventListener('keydown', (e) => {
