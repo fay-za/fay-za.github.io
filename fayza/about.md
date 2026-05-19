@@ -13,7 +13,7 @@ im currently working on a minecraft server called **faymc**, you can access it w
 ## stats
 
 - single
-- **type:** INTP
+- **MBTI:** INTP
 - **orientation:** bisexual
 - **gender:** genderfluid
 - **timezone:** UTC+3 (simferopol)
