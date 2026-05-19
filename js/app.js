@@ -1,11 +1,9 @@
 (function () {
   'use strict';
-
-  // --------- embedded fallback content (so file:// also works) ---------
   const EMBEDDED = {
     'about.md': `# about me
 
-hello! i'm a **teenager (14)**, programmer and designer.
+hello! i'm **14x**, programmer and designer.
 
 i rlly like talking with people from different countries, so feel free to text me on any of my social media.
 
