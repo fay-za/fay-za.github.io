@@ -327,7 +327,7 @@ text me anywhere, i probably reply.
     { cmd: 'ls -la',         out: ['total 4', 'drwxr-xr-x  fayza  fayza  about.md', '-rw-r--r--  fayza  fayza  interests.md', '-rw-r--r--  fayza  fayza  favorites.md', '-rw-r--r--  fayza  fayza  socials.md'] },
     { cmd: 'git status',     out: ['On branch main', 'nothing to commit, working tree clean.'] },
     { cmd: 'uname -a',       out: ['github ofc bro'] },
-    { cmd: 'neofetch',       out: ['user@fayza  ~/fayza', '------------', 'OS: Windows 11 ', 'DE: what do you think', 'Editor: DumbaS NO IDEA', 'Pronouns: they/them or whatever is in my dc status'] },
+    { cmd: 'neofetch',       out: ['user@fayza  ~/fayza', '------------', 'OS: Windows 11 ', 'DE: what do you think', 'Editor: DumbaS NO IDEA'] },
     { cmd: 'echo "hi! >w<"', out: ['hi! >w<'] },
     { cmd: 'cat .secret',    out: ['try typing in \"HESOYAM\"'] },
     { cmd: 'whoami',         out: ['fayza :: programmer / designer / 14'] },
