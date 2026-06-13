@@ -8,11 +8,11 @@ trying to be positive - you can rarely find me in a bad mental state, im always 
 
 ## currently
 
-im currently working on a minecraft server called **faymc**, you can access it with the ip `play.faymc.ru`
+thinking about my future instead of doing useless stuff
 
 ## stats
 
-- single
+- taken
 - **MBTI:** INTP
 - **orientation:** bisexual
 - **gender:** genderfluid
