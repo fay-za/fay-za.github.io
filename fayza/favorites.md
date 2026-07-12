@@ -2,14 +2,14 @@
 
 ## games
 
-omori, minecraft, gmod, gd, samp (dead asf so i play MTA)
+minecraft, gmod, roblox (mainly opposer vr), gd, beat saber, gta: sa.
 
 ## fandoms
 
-omori, oneshot (yes im not into much stuff)
+oneshot, peripeteia (yes im not into much stuff)
 
 ## hobbies
 
 - coding
 - making music
-- tinkering with pcs
+- tinkering with tech
