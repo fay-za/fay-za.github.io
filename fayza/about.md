@@ -6,14 +6,10 @@ i rlly like talking with people from different countries, so feel free to text m
 
 trying to be positive - you can rarely find me in a bad mental state, im always here if u need anything tho! `>w<`
 
-## currently
-
-thinking about my future instead of doing useless stuff
-
 ## stats
 
-- taken
+- single
 - **MBTI:** INTP
 - **orientation:** bisexual
-- **gender:** genderfluid
+- **gender:** male
 - **timezone:** UTC+3 (simferopol)
