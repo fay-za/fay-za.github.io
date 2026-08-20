@@ -2,14 +2,9 @@
 
 ## games
 
-minecraft, gmod, roblox (mainly opposer vr), gd, beat saber, gta: sa.
-
-## fandoms
-
-oneshot, peripeteia (yes im not into much stuff)
+minecraft, gmod, roblox, gd, beat saber, gta: sa.
 
 ## hobbies
 
 - coding
-- making music
 - tinkering with tech
